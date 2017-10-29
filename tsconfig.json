@@ -14,8 +14,6 @@
 		]
 	},
 	"exclude": [
-		"build",
-		"lib",
 		"node_modules"
 	],
 	"extends": "./node_modules/@player1os/tsconfig/tsconfig"
