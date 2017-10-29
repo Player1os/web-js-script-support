@@ -1,0 +1,42 @@
+{
+  "name": "@player1os/webpack-config",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "engines": {
+    "node": "~8.7.0",
+    "npm": "~5.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Player1os/webpack-config.git"
+  },
+  "keywords": [
+    "webpack",
+    "config"
+  ],
+  "author": "Osama Hassanein <player1os@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Player1os/webpack-config/issues"
+  },
+  "homepage": "https://github.com/Player1os/webpack-config#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.46",
+    "@types/webpack": "^3.0.13"
+  },
+  "dependencies": {
+    "cpr": "^2.2.0",
+    "recursive-readdir-sync": "^1.0.6",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1"
+  },
+  "_moduleAliases": {
+    "...": "."
+  }
+}
