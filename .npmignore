@@ -3,9 +3,6 @@
 coverage/
 src/
 test/
-.babelrc
-.editorconfig
-.gitattributes
 .gitignore
 .node-version
 README.md

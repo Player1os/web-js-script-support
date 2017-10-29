@@ -8,6 +8,7 @@ import * as path from 'path'
 // Expose the configuration object.
 export default (mainDirPath: string) => {
 	return {
+		// Load the common node configuration.
 		...nodeWebpackConfig(mainDirPath, true),
 		entry: [
 			// Include the project starting point into the bundle.
