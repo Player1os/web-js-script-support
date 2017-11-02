@@ -1,6 +1,6 @@
 {
   "name": "@player1os/webpack-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of common configurations the webpack bundler",
   "private": false,
   "main": "index.js",
