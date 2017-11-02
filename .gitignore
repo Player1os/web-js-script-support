@@ -6,7 +6,3 @@ index.js.map
 # NPM generated files.
 node_modules/*
 npm-debug.log*
-
-# Test coverage cache.
-.nyc_output
-coverage

@@ -1,3 +1,4 @@
+// Add runtime modules.
 import 'module-alias/register'
 
 // Load app modules.
