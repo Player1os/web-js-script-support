@@ -1,5 +1,5 @@
 // Add runtime modules.
-import 'module-alias/register'
+import '@player1os/ts-node-extra'
 
 // Load app modules.
 import nodeLibraryConfig from '.../src/node/library'
