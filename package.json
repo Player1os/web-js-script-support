@@ -1,60 +1,66 @@
 {
-  "name": "@player1os/webpack-config",
-  "version": "1.0.1",
-  "description": "A set of common configurations the webpack bundler",
+  "name": "@player1os/web-js-script-support",
+  "version": "1.1.0",
+  "description": "A set of common utilities and scripts to be used in a web js script's development",
   "private": false,
-  "main": "index.js",
-  "types": "types/index.d.ts",
+  "bin": {
+    "web-js-script-preversion": "./script/preversion.sh",
+    "web-js-script-postversion": "./script/postversion.sh",
+    "web-js-script-start": "./script/start.sh",
+    "web-js-script-build-watch": "./script/build-watch.sh",
+    "web-js-script-build": "./script/build.sh",
+    "web-js-script-deploy": "./script/deploy.sh",
+    "web-js-script-clean": "./script/clean.sh",
+    "web-js-script-lint-watch": "./script/lint-watch.sh",
+    "web-js-script-lint": "./script/lint.sh",
+    "web-js-script-test-watch": "./script/test-watch.sh",
+    "web-js-script-test": "./script/test.sh",
+    "web-js-script-validate": "./script/validate.sh"
+  },
   "engines": {
     "node": "~8.7.0",
     "npm": "~5.5.1"
   },
   "scripts": {
-    "preversion": "git checkout . && git checkout master && git pull && npm run validate",
-    "postversion": "git push && git push --tags && npm publish",
-    "start": "ts-node-extra-execute",
-    "build": "webpack",
-    "build:watch": "chockidar webpack.config.ts -c \"npm run build -- --watch\" --initial --silent",
-    "clean": "rm -rf index.js* && rm -rf types",
-    "lint": "tslint {./,src/**/,test/**/}*.ts --project ./tsconfig.json",
-    "lint:watch": "chokidar ./*.ts src/**/*.ts test/**/*.ts -c \"npm run lint\" --initial --silent",
-    "validate": "npm run clean && npm run lint && npm run build && npm run build"
+    "preversion": "git checkout . && git checkout master && git pull",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Player1os/webpack-config.git"
+    "url": "git+https://github.com/Player1os/web-js-script-support.git"
   },
   "keywords": [
-    "webpack",
-    "config"
+    "browser",
+    "script",
+    "web",
+    "webjs"
   ],
   "author": "Osama Hassanein <player1os@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Player1os/webpack-config/issues"
+    "url": "https://github.com/Player1os/web-js-script-support/issues"
   },
-  "homepage": "https://github.com/Player1os/webpack-config#readme",
+  "homepage": "https://github.com/Player1os/web-js-script-support#readme",
   "dependencies": {
-    "cpr": "^3.0.1",
+    "@player1os/module-path-alias": "^1.1.0",
+    "@player1os/dotenv": "^1.3.3",
     "fs-extra": "^4.0.2",
-    "recursive-readdir-sync": "^1.0.6",
-    "rimraf": "^2.6.2",
-    "uglifyjs-webpack-plugin": "^1.0.1",
-    "webpack": "^3.8.1"
+    "bluebird": "^3.5.1",
+    "source-map-support": "^0.5.0",
+    "uglifyjs-webpack-plugin": "^1.0.1"
   },
-  "devDependencies": {
-    "@player1os/ts-node-extra": "^1.0.1",
-    "@player1os/tsconfig": "^1.0.2",
-    "@player1os/tslint-config": "^1.3.5",
-    "@types/fs-extra": "^4.0.3",
-    "@types/node": "^8.0.46",
-    "@types/rimraf": "^2.0.2",
-    "@types/webpack": "^3.0.14",
+  "peerDependencies": {
+    "@player1os/ts-node-extra": "^1.0.2",
+    "@player1os/tsconfig": "^1.0.8",
+    "@player1os/tslint-config": "^1.3.7",
     "awesome-typescript-loader": "^3.1.3",
-    "chokidar": "^1.7.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "chokidar-cli": "^1.2.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
-    "tsutils": "^2.12.1",
     "typescript": "^2.5.3"
   }
 }
