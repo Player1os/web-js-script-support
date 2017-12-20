@@ -19,7 +19,7 @@
   },
   "engines": {
     "node": "~8.7.0",
-    "npm": "~5.5.1"
+    "npm": "~5.6.0"
   },
   "scripts": {
     "preversion": "git checkout . && git checkout master && git pull",
